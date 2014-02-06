@@ -93,7 +93,7 @@ public class LifeComponent extends JComponent {
             return;     // refuse to paint a null board
         
         Graphics2D g2 = (Graphics2D) g;
-        g2.setPaint(Color.WHITE);
+        g2.setPaint(Color.BLACK);
         int bw = cellDistance(board.getWidth());
         int bh = cellDistance(board.getHeight());
         for (int x = 0; x < bw; x += CELL_SIZE + GUTTER_SIZE) {
@@ -103,7 +103,7 @@ public class LifeComponent extends JComponent {
             g2.fillRect(0, y, bw, GUTTER_SIZE);
         }
         
-        g2.setPaint(Color.BLACK);
+        g2.setPaint(Color.MAGENTA);
         
         for (int x = 0; x < board.getWidth(); x++) {
             int xpos = cellDistance(x);

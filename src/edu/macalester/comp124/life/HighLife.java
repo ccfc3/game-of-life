@@ -5,7 +5,7 @@ package edu.macalester.comp124.life;
  *
  * @author Michael Ekstrand <ekstrand@cs.umn.edu>
  */
-public class Conway implements RuleSet {
+public class HighLife implements RuleSet {
 
     public String getName() {
         return "Conway's Rules";
@@ -30,9 +30,9 @@ public class Conway implements RuleSet {
             }
         }
 
-        /*Any dead cell with exactly 3 comes to life*/
+        /*Any dead cell with exactly 3 or exactly 6 neighbors comes to life*/
 
-        else if (neighborCount == 3)
+        else if (neighborCount == 3 || neighborCount == 6)
         {
             return true;
         }
